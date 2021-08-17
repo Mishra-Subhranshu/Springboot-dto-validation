@@ -43,7 +43,26 @@ public class StudentController {
     public long save(@Valid @RequestBody Student student) {
         studentService.createStudent(student);
         return student.getId();
-    }
+    } @PostMapping("/demo")
+//    protected ResponseEntity<Object> handleMethodArgumentNotValid( @Valid @RequestBody Student student,
+//                                                                   MethodArgumentNotValidException ex,
+//                                                                  HttpHeaders headers,
+//                                                                  HttpStatus status,
+//                                                                  WebRequest request,
+//                                                                   BindingResult bindingResult) {
+//        if (bindingResult.hasErrors()) {
+//            Map<String, String> errors = new HashMap<>();
+//            ex.getBindingResult().getAllErrors().forEach((error) -> {
+//
+//                String fieldName = ((FieldError) error).getField();
+//                String message = error.getDefaultMessage();
+//                errors.put(fieldName, message);
+//            });
+//            return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+//        }
+//        studentService.createStudent(student);
+//        return new ResponseEntity<>(HttpStatus.OK);
+//    }
 
 }
 
