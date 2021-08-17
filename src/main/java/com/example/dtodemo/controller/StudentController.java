@@ -43,7 +43,9 @@ public class StudentController {
     public long save(@Valid @RequestBody Student student) {
         studentService.createStudent(student);
         return student.getId();
-    } @PostMapping("/demo")
+    }
+
+//    @PostMapping("/demo")
 //    protected ResponseEntity<Object> handleMethodArgumentNotValid( @Valid @RequestBody Student student,
 //                                                                   MethodArgumentNotValidException ex,
 //                                                                  HttpHeaders headers,
